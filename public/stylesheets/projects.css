@@ -1,0 +1,264 @@
+.navBardemoBasicUsage md-content .ext-content {
+    padding: 50px;
+    margin: 20px;
+    background-color: #FFF2E0;
+}
+
+.tabsdemoDynamicHeight md-content {
+    background-color: transparent !important; }
+.tabsdemoDynamicHeight md-content md-tabs {
+    background: #f6f6f6;
+    border: 1px solid #e1e1e1; }
+.tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+    background: white; }
+.tabsdemoDynamicHeight md-content h1:first-child {
+    margin-top: 0; }
+
+.project-toolbar-header {
+    margin-left: 10px;
+    max-height: 120px;
+}
+
+.custom-toolbar {
+    max-width: 100%;
+    padding-right: 10%;
+    background: transparent!important;
+}
+
+.project-wrapper {
+    width: 100%;
+    min-height: 100%;
+    margin-left: 10px;
+    height: 120px;
+    /*background-color: #00B7FF;*/
+}
+
+.project-wrapper .project-header {
+    min-width: 1500px;
+    height: 80px;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.project-content {
+    min-width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    margin: 0 10px;
+    height: 100%;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(34, 62, 66, .25);
+}
+
+.project-content .project-left {
+    min-width: 320px;
+    max-width: 320px;
+    background-color: #FFFFFF;
+    min-height: 80%;
+}
+
+.project-content .project-right {
+    min-width: 1000px;
+    min-width: 1150px;
+    /*margin-left: 10px;*/
+    /*min-height: 800px;*/
+}
+
+.project-nav-button-right {
+    margin-right: 0;
+    border-radius: 0;
+    color: #2c2c2c;
+}
+
+.project-nav-button-right-clicked {
+    margin-right: 0;
+    border-radius: 0;
+    background-color: antiquewhite;
+}
+
+.project-nav-button-left {
+    margin-left: 0;
+    border-radius: 0;
+    color: #2c2c2c;
+    font-size: 18px;
+    /*background-color: antiquewhite;*/
+}
+
+.nav-wrapper {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.cuest-label {
+    color: #2c2c2c;
+}
+
+.cuest-label::before{
+    content: "";
+    position: absolute;
+    /*background: #FFC087;*/
+    left: 0px;
+    height: 3px;
+    width: 30px;
+    top: 6px;
+}
+
+.label-circle {
+    /*font-size: 28px;*/
+    font-weight: 600;
+    color: black;
+    margin-left: 8px;
+    background: #FFC087;
+    padding: 6px 10px;
+    border-radius: 40px;
+}
+
+.tab-content {
+    /*min-width: 1600px;*/
+    min-height: 100%;
+}
+
+
+.text-label {
+    padding: 10px;
+    min-height: 40px;
+    font-size: 18px;
+}
+
+.project-documnt-frame {
+    min-height:  800px;
+    /*border: solid 1px black;*/
+    /*background-color: #00B7FF;*/
+    box-shadow: 0px 2px 4px rgba(34, 62, 66, .25);
+    margin: 10px;
+}
+
+.panel-map {
+    height: 500px;
+    /*background-color: #00B7FF;*/
+}
+
+.progect-categ-list {
+
+    /*width: 300px;*/
+
+}
+
+.cont-main  {
+    min-height: 900px;
+    width: 1000px;
+    padding: 0px;
+}
+
+
+.cont-card-header {
+    min-height: 100px;
+}
+
+.cont-description {
+    height: 850px;
+    /*background: antiquewhite;*/
+    padding: 40px;
+    margin-left: 40px;
+}
+
+.cont-description.header{
+    height: 40px;
+}
+
+.cont-description-content {
+    min-height: 200px;
+    margin: 20px 0px
+}
+
+.cont-card-peoples {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    margin: 3px 10px;
+    /*background-color: #9acfea;*/
+}
+
+.cont-card-peoples:hover {
+    background-color: #FFC087;
+}
+.cont-card-docs {
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    margin: 10px 5px;
+    background-color: #9acfea;
+    background: url("../assets/img/addHover.png") no-repeat center;
+
+}
+
+.card-docs-cont {
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    margin: 10px 5px;
+    background-color: #fafafa;
+}
+
+
+.thumb {
+    width: 24px;
+    height: 24px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
+
+form .progress {
+    line-height: 15px;
+}
+
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+
+.progress div {
+    font-size: smaller;
+    /*background: orange;*/
+    width: 0;
+}
+
+
+.project-view-header {
+    min-height: 50px;
+    /*background: antiquewhite;*/
+}
+.project-view-cal {
+    min-height: 50px;
+    /*background-color: #2e6da4;*/
+}
+
+.project-view-table {
+    height: 100%;
+    /*background: violet;*/
+}
+
+.project-view-table .gantt {
+    overflow: auto;
+    /*background: aqua;*/
+
+}
+
+
+.md-list-item-text span {
+    margin: 4px;
+}
+
+
+.doc-clicked {
+    background-color: #FFC087;
+}
+
+
+
+
+
+

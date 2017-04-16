@@ -1,0 +1,543 @@
+<div class="project-wrapper" ui-view="content" >
+
+  <!--<div class="object-header" layout="row">-->
+  <!--<span>Создание объекта</span>-->
+  <!--</div>-->
+  <md-toolbar class=" custom-toolbar project-toolbar-header ">
+    <div class="md-toolbar-tools" style="margin: 0!important;padding: 0!important;">
+      <!--<md-input-container flex="25">-->
+      <!--<label>Поиск</label>-->
+      <!--<input type="text"/>-->
+      <!--</md-input-container>-->
+      <md-button class="project-nav-button-left" aria-label="Уведомления">
+        Главная
+      </md-button>
+      <md-truncate style="position: absolute; left: 180px; right: 170px; top: 13px; bottom: 13px;">
+        <span class='cuest-label'>Перевод нагрузки</span>
+        <span class="label-circle"> 16 </span>
+        <md-button class="md-raised md-primary" ng-click="vm.createProject($event)">Создать проект</md-button>
+      </md-truncate>
+
+      <span flex></span>
+      <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+      </md-button>
+      <div class="nav-wrapper">
+        <md-button class="project-nav-button-right" aria-label="Уведомления">
+          График
+        </md-button>
+        <md-button class="project-nav-button-left" aria-label="Уведомления">
+          Карта
+        </md-button>
+      </div>
+      <md-button class="md-raised" aria-label="Уведомления">
+        Уведомления
+      </md-button>
+
+    </div>
+  </md-toolbar>
+  <!--<div layout="row" class="project-content">-->
+  <!--<div layout="column" class="project-left">-->
+  <!--<md-content>-->
+  <!--<md-list flex="">-->
+  <!--&lt;!&ndash;<md-subheader class="md-no-sticky">3 line item (with hover)</md-subheader>&ndash;&gt;-->
+  <!--<md-list-item class="md-3-line" ui-sref="projects"  ng-click="null">-->
+  <!--&lt;!&ndash;<md-icon ng-src="assets/img/projects.png" aria-label="android "></md-icon>&ndash;&gt;-->
+  <!--<img class="main-icon" ng-src="assets/img/projects.png"  width="20" height="20" alt="">-->
+  <!--<div class="md-list-item-text" layout="column">-->
+  <!--<span class="text-16">Проекты</span>-->
+  <!--</div>-->
+  <!--</md-list-item>-->
+
+  <!--<md-divider></md-divider>-->
+
+  <!--</md-list>-->
+  <!--</md-content>-->
+  <!--</div>-->
+  <!--<div ui-view="content">-->
+  <div layout="column" class="project-right" >
+    <div class="main gantt">
+      <div class="container">
+        <div class="sections">
+          <div class="section_top">
+            <div class="left">
+              <span><b>Прогресс: 45%</b></span>
+              <span>Начало: 02.02.17</span>
+              <span>Конец: 02.02.17</span>
+            </div>
+            <div class="progress">
+              <span style="width: 45%"></span>
+            </div>
+          </div>
+          <div class="section_left">
+            <div class="top">
+              <span>Развернуть все</span>
+              <span>Свернуть все</span>
+            </div>
+            <div class="block opened">
+              <div class="main_item item">
+                <div class="helpers">
+                  <span class="yellow">100%</span>
+                </div>
+                <span class="ava" style="background-image: url(../../assets/img/chuvak.png)"></span>
+                <span class="title">Планирование</span>
+              </div>
+              <div class="items">
+                <div class="item">
+                  <div class="helpers">
+                    <span class="yellow">1/1</span>
+                  </div>
+                  <a href="#"><span class="title">Смета по факту</span></a>
+                </div>
+                <div class="item">
+                  <div class="helpers">
+                    <span class="yellow">1/1</span>
+                  </div>
+                  <span class="title">Договора по закупу</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="block opened">
+              <div class="main_item item">
+                <div class="helpers">
+                  <span class="comment">2</span>
+                  <span class="alert">3</span>
+                  <span class="yellow">74%</span>
+                </div>
+                <span class="ava" style="background-image: url(../../assets/img/chuvak.png)"></span>
+                <span class="title">ГПМиО</span>
+              </div>
+              <div class="items">
+                <div class="item">
+                  <div class="helpers">
+                    <span class="alert">3</span>
+                    <span class="comment">2</span>
+                    <p class="user"><span style="background-image: url('../../assets/img/chuvak.png')"></span>4</p>
+                    <span class="yellow">74%</span>
+                  </div>
+                  <a href="#"><span class="title">ТП 1</span></a>
+                </div>
+                <div class="item">
+                  <div class="helpers">
+                    <span class="red">Задержка</span>
+                  </div>
+                  <a href="#"><span class="title">ТП 2</span></a>
+                </div>
+                <div class="item">
+                  <div class="helpers">
+                    <span class="add">Добавить ТН</span>
+                  </div>
+                  <a href="#"><span class="title">ТП 3</span></a>
+                </div>
+
+                <div class="item">
+                  <a href="#"><span class="link">Добавить объект</span></a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="block opened">
+              <div class="main_item item">
+                <div class="helpers">
+                  <span class="alert">3</span>
+                  <span class="comment">2</span>
+                  <span class="yellow">74%</span>
+                </div>
+                <span class="ava" style="background-image: url(../../assets/img/chuvak.png)"></span>
+                <span class="title">ГПМиО</span>
+              </div>
+              <div class="items">
+                <div class="item">
+                  <div class="helpers">
+                    <span class="green">Поставлено</span>
+                  </div>
+                  <a href="#"><span class="title">ТП 1</span></a>
+                </div>
+                <div class="item">
+                  <div class="helpers">
+                    <span class="red">Задержка</span>
+                  </div>
+                  <a href="#"><span class="title">ТП 2</span></a>
+                </div>
+                <div class="item">
+                  <div class="helpers">
+                    <span class="grey">Отмена</span>
+                  </div>
+                  <a href="#"><span class="title">ТП 3</span></a>
+                </div>
+                <div class="item">
+                  <div class="helpers">
+                    <span class="grey">Отмена</span>
+                  </div>
+                  <a href="#"><span class="title">ТП 3</span></a>
+                </div>
+                <div class="item">
+                  <div class="helpers">
+                    <span class="grey">Отмена</span>
+                  </div>
+                  <a href="#"><span class="title">ТП 3</span></a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="section_right">
+            <div class="gantt_diagram">
+
+              <div class="switch">
+                <span class="item">Месяц</span>
+                <span class="item active">Квартал</span>
+                <span class="item">Год</span>
+              </div>
+
+
+              <div class="months">
+                <span class="arr_left"></span>
+                <div class="month">
+                  <p class="title">Декабрь</p>
+                  <div class="days">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                    <span>11</span>
+                    <span>12</span>
+                    <span>13</span>
+                    <span>14</span>
+                    <span>15</span>
+                    <span>16</span>
+                    <span>17</span>
+                    <span>18</span>
+                    <span>19</span>
+                    <span>20</span>
+                    <span>21</span>
+                    <span>22</span>
+                    <span>23</span>
+                    <span>24</span>
+                    <span>25</span>
+                    <span>26</span>
+                    <span>27</span>
+                    <span>28</span>
+                    <span>29</span>
+                    <span>30</span>
+                    <span>31</span>
+                  </div>
+                </div>
+                <div class="month">
+                  <p class="title">Январь</p>
+                  <div class="days">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                    <span>11</span>
+                    <span>12</span>
+                    <span>13</span>
+                    <span>14</span>
+                    <span>15</span>
+                    <span>16</span>
+                    <span>17</span>
+                    <span>18</span>
+                    <span>19</span>
+                    <span>20</span>
+                    <span>21</span>
+                    <span>22</span>
+                    <span>23</span>
+                    <span>24</span>
+                    <span>25</span>
+                    <span>26</span>
+                    <span>27</span>
+                    <span>28</span>
+                    <span>29</span>
+                    <span>30</span>
+                  </div>
+                </div>
+                <div class="month">
+                  <p class="title">Февраль</p>
+                  <div class="days">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                    <span>11</span>
+                    <span>12</span>
+                    <span>13</span>
+                    <span>14</span>
+                    <span>15</span>
+                    <span>16</span>
+                    <span>17</span>
+                    <span>18</span>
+                    <span>19</span>
+                    <span>20</span>
+                    <span>21</span>
+                    <span>22</span>
+                    <span>23</span>
+                    <span>24</span>
+                    <span>25</span>
+                    <span>26</span>
+                    <span>27</span>
+                    <span>28</span>
+                  </div>
+                </div>
+                <span class="arr_right"></span>
+              </div>
+
+              <div class="lines">
+
+                <div class="block opened">
+                  <div class="item big" style="width: calc(24.6px*18.5); ">
+                    <div class="outer">
+                      <span class="inner"></span>
+                    </div>
+                  </div>
+                  <div class="items">
+                    <div class="item small" style="width: calc(24.6px*13); ">
+                      <div class="outer">
+                        <span class="inner"></span>
+                      </div>
+                    </div>
+                    <div class="item small" style="width: calc(24.6px*13); left: calc(24.6px*6)">
+                      <div class="outer">
+                        <span class="inner"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="block opened">
+                  <div class="item big" style="width: calc(24.6px*22);">
+                    <div class="outer">
+                      <span class="inner"></span>
+                    </div>
+                  </div>
+                  <div class="items">
+                    <div class="item circles" style="width: calc(24.6px*7); left: calc(24.6px*3)">
+                      <div class="outer">
+                        <span class="circle green"></span>
+                        <span class="circle green"></span>
+                      </div>
+                    </div>
+
+
+                    <div class="item circles" style="width: calc(24.6px*9); left: calc(24.6px*9)">
+                      <div class="outer">
+                        <span class="circle yellow"></span>
+                        <span class="circle yellow" style="width: 70%"></span>
+                        <span class="circle red"></span>
+                      </div>
+                    </div>
+
+
+                    <div class="item circles" style="width: calc(24.6px*6); left: calc(24.6px*16)">
+                      <div class="outer">
+                        <span class="circle green"></span>
+                        <span class="circle green"></span>
+                      </div>
+                    </div>
+
+
+                    <div class="item empty"></div>
+                  </div>
+                </div>
+
+                <div class="block opened">
+                  <div class="item circles" style="width: calc(24.6px*31);">
+                    <div class="outer">
+                      <span class="circle green"></span>
+                      <span class="circle green"></span>
+                    </div>
+                  </div>
+
+                  <div class="items">
+
+                    <div class="item empty">
+
+                    </div>
+                    <div class="item empty">
+
+                    </div>
+
+
+                    <div class="item circles" style="width: calc(24.6px*44); left: calc(24.6px*6)">
+
+                      <div class="modal big done">
+                        <div class="modal_title">
+                          <h4>СМР: ТП 3 <span>90%</span></h4>
+                          <div class="close"></div>
+                        </div>
+                        <div class="info">
+                          <p class="title">Описание:</p>
+                          <p class="text">Не факт, что организация практического взаимодействия индуцирует экспериментальный продукт.</p>
+                        </div>
+                        <div class="triple">
+                          <div class="info">
+                            <p class="title">Начало:</p>
+                            <p class="text">28.12.2016</p>
+                          </div>
+                          <div class="info">
+                            <p class="title">Дедлайн:</p>
+                            <p class="text">28.12.2016</p>
+                          </div>
+                          <div class="info">
+                            <p class="title">Сдан:</p>
+                            <p class="text">28.12.2016</p>
+                          </div>
+                        </div>
+                        <div class="info">
+                          <p class="title">Состав:</p>
+                          <span class="ava" style="background-image: url(../../assets/img/chuvak.png)"></span>
+                          <span class="ava" style="background-image: url(../../assets/img/chuvak.png)"></span>
+                          <span class="ava" style="background-image: url(../../assets/img/chuvak.png)"></span>
+                        </div>
+                        <div class="info">
+                          <p class="title">Задачи:</p>
+                          <p class="text">1. Прогнать бомжей <span class="green_color">100%</span></p>
+                          <p class="text">2. Прогнать бомжей <span class="green_color">100%</span></p>
+                          <p class="text">3. Прогнать бомжей <span class="red_color">27%</span></p>
+                          <p class="text">4. Прогнать бомжей <span class="gray_color">90%</span></p>
+                          <p class="text">5. Прогнать бомжей <span class="yellow_color">44%</span></p>
+                          <p class="text">6. Прогнать бомжей <span class="green_color">100%</span></p>
+                        </div>
+                        <div class="info">
+                          <p class="title">Комментарии:</p>
+                          <p class="text">Не факт, что организация практического взаимодействия индуцирует экспериментальный продукт.6</p>
+                        </div>
+                        <p class="status">Вовремя</p>
+                      </div>
+
+
+
+
+
+
+                      <div class="outer">
+                        <span class="circle small red"></span>
+                        <div class="circle error" style="width: 17%">
+
+                          <div class="modal">
+                            <div class="modal_title">
+                              <h4>Прогнать бомжей <span>100%</span></h4>
+                              <div class="close"></div>
+                            </div>
+                            <div class="info">
+                              <p class="title">Начало:</p>
+                              <p class="text">28.12.2016</p>
+                            </div>
+                            <div class="info">
+                              <p class="title">Дедлайн:</p>
+                              <p class="text">28.12.2016</p>
+                            </div>
+                            <div class="info">
+                              <p class="title">Сдан:</p>
+                              <p class="text">28.12.2016</p>
+                            </div>
+                            <p class="status">Вовремя</p>
+                          </div>
+
+                        </div>
+                        <div class="circle question" style="width: 26%">
+
+
+                          <div class="modal">
+                            <div class="modal_title">
+                              <h4>Прогнать бомжей <span>100%</span></h4>
+                              <div class="close"></div>
+                            </div>
+                            <div class="info">
+                              <p class="title">Начало:</p>
+                              <p class="text">28.12.2016</p>
+                            </div>
+                            <div class="info">
+                              <p class="title">Дедлайн:</p>
+                              <p class="text">28.12.2016</p>
+                            </div>
+                            <div class="info">
+                              <p class="title">Сдан:</p>
+                              <p class="text">28.12.2016</p>
+                            </div>
+                            <p class="status">Вовремя</p>
+                          </div>
+
+                        </div>
+                        <div class="circle done" style="width: 24%">
+
+
+                          <div class="modal">
+                            <div class="modal_title">
+                              <h4>Прогнать бомжей <span>100%</span></h4>
+                              <div class="close"></div>
+                            </div>
+                            <div class="info">
+                              <p class="title">Начало:</p>
+                              <p class="text">28.12.2016</p>
+                            </div>
+                            <div class="info">
+                              <p class="title">Дедлайн:</p>
+                              <p class="text">28.12.2016</p>
+                            </div>
+                            <div class="info">
+                              <p class="title">Сдан:</p>
+                              <p class="text">28.12.2016</p>
+                            </div>
+                            <p class="status">Вовремя</p>
+                          </div>
+
+                        </div>
+                        <span class="circle green"></span>
+                      </div>
+                    </div>
+
+                    <div class="item circles" style="width: calc(24.6px*20); left: calc(24.6px*16)">
+                      <div class="outer">
+                        <span class="circle yello"></span>
+                        <span class="circle red" style="width: 17%"></span>
+                        <span class="circle green" style="width: 56%"></span>
+                        <span class="circle grey" style="width: 9%"></span>
+                        <span class="circle green"></span>
+                      </div>
+                    </div>
+
+
+                    <div class="item circles" style="width: calc(24.6px*16); left: calc(24.6px*9)">
+                      <div class="outer">
+                        <span class="circle small yellow"></span>
+                        <span class="circle small yellow" style="width: 20%"></span>
+                        <span class="green" style="width: 10%"></span>
+                        <span class="circle yellow" style="width: 16%"></span>
+                        <span class="circle small yellow" style="width: 29%"></span>
+                        <span class="circle small red"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>

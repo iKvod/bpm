@@ -1,0 +1,297 @@
+<div layout="column" class="object-wrapper">
+  <div class="object-header" layout="row">
+    <span>Объекты</span>
+  </div>
+  <div layout="row" class="object-content">
+    <div layout="column" class="object-left" layout-padding>
+      <div class="panel-group" ng-model="vm.panels.activePanel" role="tablist" aria-multiselectable="true" bs-collapse>
+        <div class="panel panel-default" ng-repeat="obj in vm.objects.categories track by $index">
+          <div class="panel-heading" role="tab">
+            <h4 class="panel-title">
+              <a bs-collapse-toggle>
+                {{ obj.name }}
+              </a>
+            </h4>
+          </div>
+          <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+            <div ng-if="temp.category_id === obj.id" ng-click="vm.addTemplate(temp.id, temp.name)" class="panel-body" ng-repeat="temp in vm.templates track by $index">
+              <!--<span class="badge"> {{ panel.name }}</span>-->
+              <span > {{(temp.category_id === obj.id) ? temp.name : null}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div layout="column">
+        <md-button class="md-raised custom_btn md-primary" type="button" ng-click="">
+          Создать категорию
+        </md-button>
+        <md-button class="md-raised custom_btn md-primary" type="button" ng-click="">
+          Создать объект
+        </md-button>
+      </div>
+    </div>
+
+    <div class="object-right">
+      <div class="container-fluid" layout="column">
+        <div class="row" class="col-sm-4 object-border">
+          <div class="col-sm-1">Название</div>
+          <div class="col-sm-9">
+            <a href="">
+              <span>Изменить название</span>
+            </a>
+          </div>
+        </div>
+        <div layout="column" class="col-sm-4 object-border object-desc">
+          <div layout="row">
+            <div>Описание</div>
+            <div>
+              <a href="">
+                <span>Изменить название</span>
+              </a>
+            </div>
+          </div>
+          <div layout="row">
+            <p>lfajhlkfj lkajflja lkfjla jlkj</p>
+          </div>
+        </div>
+        <div layout="column" class="col-sm-10 object-border">
+          <h3>Документы</h3>
+          <div layout="row" layout-margin="20px 0 20px 0">
+            <div layout="column" ng-repeat="doc in vm.template.doc track by $index">
+              <div layout="row">
+                <div layout="column">
+                  <div class="card-docs-cont">
+                    <span>{{ $index }}</span>
+                    <!--<span> {{doc.name.slice(0,9)}}</span>-->
+
+                  </div>
+                  <span>{{ doc.name.slice(0,9)}}</span>
+                </div>
+              </div>
+            </div>
+            <a href="">
+              <div layout="column" class="object-materials"  layout-padding="">
+                <md-button class="cont-card-docs" type="file" ngf-select="vm.setFiles($file, $invalidFiles)"
+                           accept="image/*;.pdf;.docx" ngf-max-size="64MB">
+                  <!--Выбрать документ-->
+                </md-button>
+                <!--<button ngf-select="vm.setFiles($files)" multiple-->
+                <!--accept="image/*" class="cont-card-docs"> Выбрать файл-->
+                <!--</button>-->
+                <span>{{vm.fileName}}</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+        <div layout="column" class="col-sm-10 object-border">
+          <h3>Видео</h3>
+          <div layout="row" layout-margin="20px 0 20px 0">
+            <div layout="column" ng-repeat="doc in vm.proj.document track by $index">
+              <div layout="row">
+                <div layout="column">
+                  <div class="card-docs-cont">
+                    <span>{{ $index }}</span>
+                    <span> {{doc.name.slice(0,9)}}</span>
+
+                  </div>
+                  <span>{{ doc.name.slice(0,9)}}</span>
+                </div>
+              </div>
+            </div>
+            <a href="">
+              <div layout="column" class="object-materials"  layout-padding="">
+                <md-button class="obj-card-vid" ng-click="vm.setLink()">
+                  <!--Выбрать видео-->
+                </md-button>
+                <!--<button ngf-select="vm.setFiles($files)" multiple-->
+                <!--accept="image/*" class="cont-card-docs"> Выбрать файл-->
+                <!--</button>-->
+                <span>{{vm.fileName}}</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <div layout="column" class="col-sm-10 object-border">
+          <h3>Категории</h3>
+          <div class="panel-group" ng-model="vm.panels.activePanel2" role="tablist" aria-multiselectable="true" bs-collapse>
+            <div class="panel panel-default" ng-repeat="obj in vm.objects.categories track by $index">
+              <div class="panel-heading" role="tab">
+                <h4 class="panel-title">
+                  <a bs-collapse-toggle>
+                    {{ obj.name }}
+                  </a>
+                </h4>
+              </div>
+              <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+                <div ng-if="temp.category_id === obj.id" ng-click="vm.addTemplate(temp.id, temp.name)" class="panel-body" ng-repeat="temp in vm.templates track by $index">
+                  <!--<span class="badge"> {{ panel.name }}</span>-->
+                  <span > {{(temp.category_id === obj.id) ? temp.name : null}}</span>
+                </div>
+              </div>
+            </div>
+          <!--<div class="panel-group" ng-model="vm.panels.activePanel2" role="tablist" aria-multiselectable="true" bs-collapse>-->
+            <!--<div class="panel panel-default" ng-repeat="panel in vm.panels">-->
+              <!--<div class="panel-heading" role="tab">-->
+                <!--<h4 class="panel-title">-->
+                  <!--<a bs-collapse-toggle>-->
+                    <!--{{ panel.title }}-->
+                  <!--</a>-->
+                <!--</h4>-->
+              <!--</div>-->
+              <!--<div class="panel-collapse" role="tabpanel" bs-collapse-target>-->
+                <!--<div class="panel-body">-->
+                  <!--{{ panel.body }}-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+
+        </div>
+
+
+
+
+
+
+      </div>
+        <div layout="row" class="col-sm-11 object-border">
+          <div layout="column" class="col-sm-4 object-border">
+            <h3>Задачи</h3>
+            <div class="panel-group" ng-model="vm.panels.activePanel3" role="tablist" aria-multiselectable="true" bs-collapse>
+              <div class="panel panel-default" ng-repeat="panel in vm.panels">
+                <div class="panel-heading" role="tab">
+                  <h4 class="panel-title">
+                    <a bs-collapse-toggle>
+                      {{ panel.title }}
+                    </a>
+                  </h4>
+                </div>
+                <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+                  <div class="panel-body">
+                    {{ panel.body }}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div layout="column" class="col-sm-8 object-border">
+            <div layout="column" class="col-sm-12 object-border">
+              <h3>Задачи</h3>
+              <div class="panel-group" ng-model="vm.panels.activePanel4" role="tablist" aria-multiselectable="true" bs-collapse>
+                <div class="panel panel-default" ng-repeat="level in vm.levels track by $index">
+                  <div class="panel-heading" role="tab">
+                    <div layout="row">
+                      <h4 class="panel-title mr10">
+                        <a bs-collapse-toggle>
+                          {{ level.name }}
+                        </a>
+                      </h4>
+                      <div layout="row">
+                        <a ng-click="vm.setLevel(level.id)">
+                          <p class="badge mr10">Уровень</p>
+                        </a>
+                        <a ng-click="vm.setTask(level.id)">
+                          <p class="badge mr10">Задача</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+                      <div class="panel-body">
+                        <md-list ng-if="true" ng-repeat="lev in vm.levels track by $index">
+                          <md-list-item class="md-2-line" ng-repeat="task in vm.task track by $index">
+                          <!--<md-checkbox ng-model="item.done"></md-checkbox>-->
+                            <div class="md-list-item-text">
+                              <span>{{task.name}}</span>
+                              <h3>{{ (task.parentId === lev.parentId) ? task.name: 'дфыоа'}}</h3>
+                            </div>
+                          </md-list-item>
+                        </md-list>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+      <!--<div class="container">-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-12">-->
+
+          <!--</div>-->
+
+        <!--</div>-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-12">-->
+
+          <!--</div>-->
+
+        <!--</div>-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-12">-->
+
+          <!--</div>-->
+
+        <!--</div>-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-12">-->
+
+          <!--</div>-->
+        <!--</div>-->
+
+      <!--</div>-->
+
+
+
+
+
+
+      <!--<div class="panel-group" ng-model="vm.panels.activePanel" role="tablist" aria-multiselectable="true" bs-collapse>-->
+        <!---->
+        <!--<div class="panel panel-default" ng-repeat="panel in vm.panels">-->
+          <!--<div class="panel-heading" role="tab">-->
+            <!--<h4 class="panel-title">-->
+              <!--<a bs-collapse-toggle>-->
+                <!--{{ panel.title }}-->
+              <!--</a>-->
+            <!--</h4>-->
+          <!--</div>-->
+          <!--<div class="panel-collapse" role="tabpanel" bs-collapse-target>-->
+            <!--<div class="panel-body">-->
+              <!--{{ panel.body }}-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<md-list flex style="max-width: 400px">-->
+        <!--<md-list-item ng-click="vm.toggle.list1 = !vm.toggle.list1">-->
+          <!--<md-icon>explore</md-icon>-->
+          <!--<span flex>Item List 1</span>-->
+          <!--<md-icon ng-show="!vm.toggle.list1">expand_more</md-icon>-->
+          <!--<md-icon ng-show="vm.toggle.list1">expand_less</md-icon>-->
+        <!--</md-list-item>-->
+        <!--<md-list-item ng-repeat="item in vm.data" ng-show="vm.toggle.list1">-->
+          <!--<span flex-offset="5">{{item}}</span>-->
+        <!--</md-list-item>-->
+        <!--<md-list-item ng-click="vm.toggle.list2 = !vm.toggle.list2">-->
+          <!--<md-icon>explore</md-icon>-->
+          <!--<span flex>Item List 2</span>-->
+          <!--<md-icon ng-show="!vm.toggle.list2">expand_more</md-icon>-->
+          <!--<md-icon ng-show="vm.toggle.list2">expand_less</md-icon>-->
+        <!--</md-list-item>-->
+        <!--<md-list-item ng-repeat="item in vm.data" ng-show="vm.toggle.list2">-->
+          <!--<span flex-offset="5">{{item}}</span>-->
+        <!--</md-list-item>-->
+      <!--</md-list>-->
+    </div>
+
+  </div>
+
+</div>

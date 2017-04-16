@@ -1,0 +1,14 @@
+
+<div class="jumbotron text-center">
+  <div class="auth">
+    <h4>Авторизация</h4>
+    <form id="loginForm" class="form" >
+      <p>Логин</p>
+      <input name="username" ng-model="vm.username" type="text">
+      <p>Пароль</p>
+      <input name="password" ng-model="vm.password" type="password">
+      <input name="submit" type="submit" class="button" value="Войти" ng-click="vm.login()">
+    </form>
+    <div id="auth_token"></div>
+  </div>
+</div>

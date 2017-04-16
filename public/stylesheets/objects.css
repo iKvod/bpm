@@ -1,0 +1,96 @@
+.object-wrapper {
+    width: 100%;
+    min-height: 100%;
+    /*background-color: #00B7FF;*/
+}
+
+.object-wrapper .object-header {
+    min-width: 1500px;
+    height: 80px;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.object-content {
+    /*min-width: 100%;*/
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    /*margin: 10px;*/
+    min-height: 100%;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(34, 62, 66, .25);
+    margin: 0 20px 0 10px;
+}
+
+.object-content .object-left {
+    min-width: 320px;
+    max-width: 320px;
+    background-color: #FFFFFF;
+    min-height: 100%;
+    margin-right: 10px;
+    border: solid 1px aliceblue;
+    /*padding: 5px;*/
+}
+
+.object-content .object-right {
+    /*background-color: #00B7FF;*/
+     min-width: 81%;
+    min-height: 100%;
+    padding: 30px;
+    /*max-width: 1000px;*/
+    /*min-height: 800px;*/
+}
+
+
+.object-materials {
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 120px;
+    /*background-color: lavender;*/
+}
+
+.object-desc {
+    min-width: 500px;
+    height: 200px;
+}
+
+
+.object-border {
+    border: solid 2px #FFC087;
+    margin-top: 20px;
+}
+
+.object-modal-wrapper {
+    max-width: 600px;
+    min-height: 300px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.object-modal-wrapper .modal-content-c {
+    height: 200px;
+    font-size: 20px;
+    padding: 50px 30px;
+}
+
+.obj-card-vid {
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    margin: 10px 5px;
+    background-color: #9acfea;
+    background: url("../assets/img/play.png") no-repeat center;
+
+}
+
+obj-card-vid :hover {
+ background: url("../assets/img/playHover.png");
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+

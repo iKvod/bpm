@@ -1,0 +1,16 @@
+.dialogdemoThemeInheritance .container {
+    text-align: center; }
+
+.objects-wrapper-modal {
+    width: 500px;
+    min-height: 300px;
+}
+
+
+objects-wrapper-modal .content-dial {
+    width: 100%;
+    height: 100%;
+}
+
+
+

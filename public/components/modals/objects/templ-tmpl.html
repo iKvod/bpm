@@ -1,0 +1,24 @@
+<md-dialog id="dialog" aria-label="Регистрация" class="object-modal-wrapper" flex="100">
+
+
+  <md-dialog-content  class="modal-content-c">
+
+    <md-input-container class="md-block">
+      <label for="testInput">Введите ссылку на видео</label>
+      <input id="testInput" ng-model="vm.link" md-autofocus type="text">
+    </md-input-container>
+
+    </md-dialog-content>
+
+  <md-dialog-actions layout="row">
+
+    <md-button class="button-font" ng-click="vm.answer()">
+    Добавить ссылку
+    </md-button>
+    <md-button class="button-font" ng-click="vm.cancel()">
+    Отмена
+    </md-button>
+
+  </md-dialog-actions>
+
+</md-dialog>

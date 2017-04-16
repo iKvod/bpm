@@ -1,0 +1,50 @@
+<md-dialog class="objects-wrapper-modal">
+
+  <md-toolbar>
+
+  </md-toolbar>
+
+  <md-dialog-content class="content-dial">
+    <div layout="column">
+      <div class="panel-group" ng-model="vm.projects.activePanel" role="tablist" aria-multiselectable="true" bs-collapse>
+        <div class="panel panel-default" ng-repeat="obj in vm.objects.categories track by $index">
+          <div class="panel-heading" role="tab">
+            <h4 class="panel-title">
+              <a bs-collapse-toggle>
+                {{ obj.name }}
+              </a>
+            </h4>
+          </div>
+          <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+            <div ng-if="temp.category_id === obj.id" ng-click="vm.addTemplate(temp.id, temp.name)" class="panel-body" ng-repeat="temp in vm.templates track by $index">
+              <!--<span class="badge"> {{ panel.name }}</span>-->
+              <span > {{(temp.category_id === obj.id) ? temp.name : null}}</span>
+              <!--<md-list>-->
+              <!--<md-list-item class="md-2-line" ng-repeat="item in panel.task track by $index">-->
+              <!--&lt;!&ndash;<md-checkbox ng-model="item.done"></md-checkbox>&ndash;&gt;-->
+              <!--<div class="md-list-item-text">-->
+              <!--<h3>Number {{ $index + 1 }}</h3>-->
+              <!--<p>Task # {{ $index + 2}}</p>-->
+              <!--</div>-->
+              <!--</md-list-item>-->
+              <!--</md-list>-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </md-dialog-content>
+
+  <md-dialog-actions layout="row">
+    <md-button class="button-font" ng-click="vm.showTemplate()">
+      Выбрать
+    </md-button>
+    <md-button class="button-font" ng-click="vm.cancel()">
+      Отмена
+    </md-button>
+  </md-dialog-actions>
+
+</md-dialog>
+

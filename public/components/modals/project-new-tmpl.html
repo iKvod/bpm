@@ -1,0 +1,91 @@
+<md-dialog id="dialog" aria-label="Регистрация" class="cont-main" flex="100>
+  <form ng-cloak id='content' name="userForm ">
+    <!--<md-toolbar class="form-toolbar">-->
+
+    <!--</md-toolbar>-->
+
+    <md-dialog-content  class="cont-description">
+      <div layout="column" flex="50">
+        <div layout="row">
+          <h4 style=" min-width: 200px; max-width: 200px;">{{vm.proj.name}}</h4>
+          <a href=""> <span>Изменить</span></a>
+        </div>
+        <div flex="50">
+          <md-input-container style="display: block;" flex="25">
+            <!--<label for="name">Описание проекта</label>-->
+            <textarea  aria-label="Оао" id="name" ng-model="vm.proj.name" md-autofocus type="text"></textarea>
+          </md-input-container>
+          <md-divider></md-divider>
+        </div>
+
+        <div layout="column" class="cont-description-content">
+          <div layout="row" style="margin-top: 15px">
+            <span>Описание</span>
+            <a href=""> <span>Измениь описание</span></a>
+          </div>
+          <div flex="40" layout="column">
+            <div layout-padding layout-margin style="background-color: #F8F7F7; min-height: 120px;width: 350px;">
+              <span>{{vm.proj.desc}}</span>
+            </div>
+            <md-input-container style="display: block;" >
+              <label for="desc">Описание проекта</label>
+              <textarea aria-label="Оао" id="desc" ng-model="vm.proj.desc" md-autofocus type="text"></textarea>
+            </md-input-container>
+          </div>
+        </div>
+        <div layout="column">
+          <span>Выбрать инженера</span>
+          <div layout="row">
+            <div class="cont-card-peoples" ng-repeat="pep in vm.peoples">
+              <img src={{pep.image}} alt="..." class="img-rounded">
+
+            </div>
+          </div>
+        </div>
+
+          <span>Документы</span>
+          <div layout="row" layout-margin="20px 0 20px 0">
+            <div layout="column" ng-repeat="doc in vm.proj.document track by $index">
+              <div layout="row">
+                <div layout="column">
+                  <div class="card-docs-cont">
+                    <span>{{ $index }}</span>
+                    <span> {{doc.name.slice(0,9)}}</span>
+
+                  </div>
+                  <span>{{ doc.name.slice(0,9)}}</span>
+                </div>
+              </div>
+            </div>
+            <a href="">
+              <div layout="column" >
+                <md-button class="cont-card-docs" type="file" ngf-select="vm.setFiles($file, $invalidFiles)"
+                        accept="image/*;.pdf;.docx" ngf-max-size="64MB">
+                  Выбрать файл
+                </md-button>
+                <!--<button ngf-select="vm.setFiles($files)" multiple-->
+                       <!--accept="image/*" class="cont-card-docs"> Выбрать файл-->
+                <!--</button>-->
+                <span>{{vm.fileName}}</span>
+              </div>
+            </a>
+          </div>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <!--<md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>-->
+      <!--More on Wikipedia-->
+      <!--</md-button>-->
+      <!--<span flex></span>-->
+
+      <md-button class="button-font" ng-click="vm.createProject(vm.proj)" ng-disabled="userForm.$invalid">
+        Сохранить
+      </md-button>
+      <md-button class="button-font" ng-click="vm.cancel()">
+        Отмена
+      </md-button>
+
+    </md-dialog-actions>
+  </form>
+</md-dialog>
